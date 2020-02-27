@@ -18,9 +18,14 @@ export class SpecificFilm extends Component {
 
   render() {
     return (
-      <div className = "card">
-        <h1 className="display-3 card-title">{this.state.film.title}</h1>
-    <p className='card-body'>{this.state.film.description}</p>
+      <div className="container-fluid" key ={this.state.film.id}>
+        <div className="card">
+          <h1 className="display-3 card-title ml-3 mt-4">
+            {this.state.film.title}
+          </h1>
+          <p className="text-muted ml-3">{`Director: ${this.state.film.director}`}</p>
+          <p className="card-body">{this.state.film.description}</p>
+        </div>
       </div>
     );
   }
